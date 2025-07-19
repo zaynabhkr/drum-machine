@@ -7,7 +7,7 @@ Play sounds by clicking the pads or pressing keys on your keyboard.
 
 ## 🔗 Live Demo
 
-👉 [View App Live]([https://your-live-link.com](https://drum-machine-nu-amber.vercel.app/))
+👉 [View App Live]([https://drum-machine-nu-amber.vercel.app/])
 
 ---
 
