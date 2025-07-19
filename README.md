@@ -1,13 +1,13 @@
 # 🥁 Drum Machine
 
-A React-based drum machine built as part of the [freeCodeCamp Front End Development Libraries Certification](https://www.freecodecamp.org/learn/front-end-development-libraries/#front-end-development-libraries-projects).  
+A React-based drum machine.  
 Play sounds by clicking the pads or pressing keys on your keyboard.
 
 ---
 
 ## 🔗 Live Demo
 
-👉 [View App Live]([https://drum-machine-nu-amber.vercel.app/])
+👉 [View App Live](https://drum-machine-nu-amber.vercel.app/)
 
 ---
 
