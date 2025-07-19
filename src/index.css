@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  background: #181818;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#drum-machine {
+  background: #232323;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #000a;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#display {
+  background: #333;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  min-width: 200px;
+  text-align: center;
+  border: 2px solid #444;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 340px;
+  margin-bottom: 40px;
+  align-items: center;
+  gap: 0;
+}
+
+.controls label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  gap: 8px;
+}
+
+.pad-bank {
+  display: grid;
+  grid-template-columns: repeat(3, 105px); 
+  gap: 28px; 
+  justify-content: center;
+}
+
+.drum-pad {
+  background: #444;
+  border: 2px solid #888;
+  border-radius: 14px;
+  width: 105px;   
+  height: 105px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem; 
+  cursor: pointer;
+  box-shadow: 0 2px 8px #111;
+  transition: background 0.2s, transform 0.1s;
+  user-select: none;
+}
+
+.drum-pad:active,
+.drum-pad:focus {
+  background: #39ff14;
+  color:black;
+  outline: 2px solid #fff;
+  transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+input[type="range"] {
+  width: 100px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 53px;
+  height: 25px;
+  display: inline-block;
+}
+
+.toggle-switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: black; 
+  border-radius: 6px;   
+  transition: background 0.2s;
+  border: 2px solid #fff;
+
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: #ff1493; 
+}
+
+.toggle-slider:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  right:1px;
+  width: 18px;
+  height: 16px;
+  background: #fff;
+  border-radius: 4px; 
+  transition: transform 0.2s;
+  transform: translateX(0);
+  box-shadow: 0 1px 4px #0003;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+input[type="range"] {
+  width: 120px;
+  height: 18px;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-top: 8px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 18px;
+  background:
+    linear-gradient(to right, #ff1493 0 var(--percent, 50%), #888 var(--percent, 50%) 100%),
+    repeating-linear-gradient(
+      to right,
+      transparent 0 0,
+      transparent 0 8px,
+      #181818 8px 12px
+    );
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 18px;
+  background:
+    linear-gradient(to right, #ff1493 0 var(--percent, 50%), #888 var(--percent, 50%) 100%),
+    repeating-linear-gradient(
+      to right,
+      transparent 0 0,
+      transparent 0 8px,
+      #181818 8px 12px
+    );
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #ff1493;
+  border-radius: 4px;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #888;
+  border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #ff1493;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #0003;
+  transition: background 0.2s;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: #ff69b4;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #ff1493;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #0003;
+  transition: background 0.2s;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  background: #ff69b4;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  background: #ff1493;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #0003;
+  transition: background 0.2s;
+}
+
+input[type="range"]:focus::-ms-thumb {
+  background: #ff69b4;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"] {
+  scrollbar-width: none;
+}
